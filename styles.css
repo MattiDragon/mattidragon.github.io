@@ -1,0 +1,86 @@
+div.menu
+{
+	float:left;
+	height: 650px;
+	width: 10%;
+	background-color: rgb(40,40,40);
+	padding: 5px;
+}
+
+div.content
+{
+	height: 600px;
+	width: 88%;
+	background-color: rgb(40,40,40);
+	padding: 5px;
+	margin: 5px;
+	margin-left: 11%;
+}
+
+body
+{
+	background-color: rgb(69,69,69);
+}
+
+p 
+{
+	color: #757575;
+}
+
+h1
+{	
+	display: block;
+	width: 88%;
+	height: 50px;
+	font-size: 40px;
+	text-align: center;
+	padding: 5px;
+	margin: 0px;
+	margin-left: 11%;
+	background-color: #282828;
+	color: #757575;
+
+}
+
+
+li a:link, li a:visited
+{
+	display: block;
+	padding: 8px;
+	background-color: #757575;
+	color: #000000;
+	text-decoration: none;
+	width: 80%;
+	text-align: center;
+	margin-right: 0px;
+}
+
+li a:hover
+{
+	display: block;
+	padding: 8px;
+	background-color: #5e5e5e;
+	color: #000000;
+	text-decoration: none;
+	width: 88%;
+	text-align: center;	
+}
+
+li a.active
+{
+	display: block;
+	padding: 8px;
+	background-color: #15b300;
+	color: #000000;
+	text-decoration: none;
+	width: 88%;
+	text-align: center;
+}
+
+ul 
+{
+	list-style-type: none;
+	overflow: auto;
+	margin: 0;
+	padding: 0;
+}

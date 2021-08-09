@@ -3,23 +3,43 @@
 <head>
 	<title>MattiDragon - Home</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">  
 </head>
 <body>
-	
-	
-	<div class="menu">
-		<ul>
-			<li><a class="active" href="index.html">Home</a></li>
-			<li><a href="randomizer.html">Randomizer</a></li>
-		</ul>
-	</div>
+	<iframe id="sidebar" src="sidebar.html"></iframe>
 	
 	<h1>MattiDragon's Page</h1>
-	
 	<div class="content"> 
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet justo donec enim diam vulputate. Ipsum consequat nisl vel pretium lectus quam id leo. Tortor vitae purus faucibus ornare suspendisse sed nisi lacus sed. Lorem dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. At lectus urna duis convallis convallis. Erat velit scelerisque in dictum non consectetur a. Laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt. Ac orci phasellus egestas tellus. Massa placerat duis ultricies lacus sed turpis.</p>
+		<div>
+			<h2>Welcome</h2>
+			<p>Welcome to my website. Here you can find <a href="projects">a list of my projects</a>. I'm probably going to add more at some point but this is it for now. Please report any issues on <a href="https://github.com/MattiDragon/mattidragon.github.io">github</a>.</p>
+		</div>
+		<div>
+			<h2>About Me</h2>
+			<p>My name is MattiDragon and I like programming. I usually progam in Java, but I also know the basics of Python, JavaScrip, C# and probably more I forgot about. I am actively making mods for <a href="https://fabricmc.net" >the fabric modloader</a> for minecraft and talk about it on the official discord server. I have participated in creating the monstrosity that is <a href="projects#gwwhit">GWWHIT</a>.</p>
+		</div>
 	</div>
-	
 </body>
+
+<script>
+window.addEventListener("load", function(){
+ 	var sidebar = document.getElementById("sidebar").contentWindow.document.body;
+	var list = sidebar.children;
+	
+	for (let i = 0; i < list.length; i++) {
+	    let	entry = list[i];
+		
+		if (entry.id === "home") {
+			entry.classList.add("active");
+		}
+	}
+});
+
+var sidebar = document.getElementById("sidebar");
+
+sidebar.onload = function() {
+	sidebar.style.height = sidebar.contentWindow.document.body.scrollHeight + 15 + 'px';
+}
+</script>
 
 </html>

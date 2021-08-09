@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MattiDragon - Projects</title>
+	<link rel="stylesheet" type="text/css" href="../styles.css">
+	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">  
+</head>
+<body>
+	<iframe id="sidebar" src="../sidebar.html"></iframe>
+
+	<h1>MattiDragon's Projects</h1>
+	
+	<div class="content"> 
+		<div id="vccl">
+			<h2>VCCL</h2>
+			<p>Variable controlled commandline language is an esoteric programming language that relies on variables for control flow and io. It's my first esolang and has a working interpreter writen in java. It has a fairly simple syntax and 11 total operations. Every command assigns a value to a variable which can be computed using an expression or got from an other variable.</p>
+			<a style="background-color: darkcyan" class="external" target="_blank" href="https://github.com/MattiDragon/VCCL"><img border="0" src="link.png" width="32" height="32"></img>Github</a>
+			<a style="background-color: green" class="external" target="_blank" href="https://github.com/MattiDragon/VCCL/releases/download/v0.1/VCCL-0.1.jar"><img border="0" src="link.png" width="32" height="32"></img>Download Unstable</a>
+		</div>
+		<div id="gwwhit">
+			<h2>GWWHIT</h2>
+			<p>GWWHIT or Guess What Will Happen In This is a minecraft fabric mod started by <a target="_blank" href="https://github.com/anatom3000">anatom3000</a>. The idea is that anyone can add anything to the mod. I myself have add <a target="_blank" href="https://github.com/anatom3000/GuessWhatWillHappenInThis/commits?author=MattiDragon">a bit of stuff</a>. Some of the features include totally messed up rendering, tons of new ores, all kinds of wierd items and lots of settings that can compleatly change the game.</p>
+			<a style="background-color: darkcyan" class="external" target="_blank" href="https://github.com/anatom3000/GuessWhatWillHappenInThis/"><img border="0" src="link.png" width="32" height="32"></img>Github</a>
+			<a style="background-color: darkgoldenrod" class="external" id="gwwhit-stable-download" target="_blank" href=""><img border="0" src="link.png" width="32" height="32"></img>Download Stable</a>
+			<a style="background-color: green" class="external" target="_blank" href="https://github.com/anatom3000/GuessWhatWillHappenInThis/releases/download/latest/GuessWhatWillHappenInThis-1.2.0-all.jar"><img border="0" src="link.png" width="32" height="32"></img>Download Unstable</a>
+			<a style="background-color: mediumslateblue" class="external" target="_blank" href="https://discord.gg/VenFqgaHDj"><img border="0" src="link.png" width="32" height="32"></img>Discord</a>
+		</div>
+		<div id="nmmm">
+			<h2>No More Magic Milk</h2>
+			<p>No More Magic Milk is a minecraft fabric mod that allows you to controll how milk buckets work. It can be used to buff or nerf milk so that it fits in your modpack. In the future this mod may recive other features that allow controllng vanilla mechanics.</p>
+			<a style="background-color: darkcyan" class="external" target="_blank" href="https://github.com/MattiDragon/no-magic-milk"><img border="0" src="link.png" width="32" height="32"></img>Github</a>
+			<a style="background-color: darkgoldenrod" class="external" id="nmmm-stable-download" target="_blank" href=""><img border="0" src="link.png" width="32" height="32"></img>Download Stable</a>
+		</div>
+	</div>
+</body>
+
+<script src="link-fetcher.js"></script>
+<script>
+window.addEventListener("load", function(){
+ 	var sidebar = document.getElementById("sidebar").contentWindow.document.body;
+	var list = sidebar.children;
+	
+	for (let i = 0; i < list.length; i++) {
+	    let	entry = list[i];
+		
+		if (entry.id === "projects") {
+			entry.classList.add("active");
+		}
+	}
+});
+
+var sidebar = document.getElementById("sidebar");
+
+sidebar.onload = function() {
+	sidebar.style.height = sidebar.contentWindow.document.body.scrollHeight + 15 + 'px';
+}
+
+getModrinthLink("mUOQM1cd", "release", url => document.getElementById("gwwhit-stable-download").href = url)
+getModrinthLink("IaVeFjxf", "release", url => document.getElementById("nmmm-stable-download").href = url)
+</script>
+
+</html>

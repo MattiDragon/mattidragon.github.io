@@ -1,86 +1,101 @@
-div.menu
+*{
+	font-family: 'roboto';
+}
+
+#sidebar
 {
-	float:left;
-	height: 650px;
-	width: 10%;
-	background-color: rgb(40,40,40);
+	float: left;
+	width: 200px;
 	padding: 5px;
+	border-width: 0px;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	overflow-x: hidden;
+	background-color: rgb(40,40,40);
 }
 
 div.content
 {
-	height: 600px;
-	width: 88%;
+	height: calc(100% - 66px);
 	background-color: rgb(40,40,40);
 	padding: 5px;
-	margin: 5px;
-	margin-left: 11%;
+	padding-left: 15px;
+	margin: 0px;
+	margin-left: 215px;
+	margin-top: 5px;
+	overflow: hidden;
 }
+
 
 body
 {
 	background-color: rgb(69,69,69);
+	margin: 5px;
 }
 
-p 
-{
+p {
 	color: #757575;
 }
 
-h1
-{	
-	display: block;
-	width: 88%;
-	height: 50px;
+h1 {	
 	font-size: 40px;
 	text-align: center;
 	padding: 5px;
 	margin: 0px;
-	margin-left: 11%;
+	margin-left: 215px;
 	background-color: #282828;
 	color: #757575;
-
+	overflow: hidden;
 }
 
+h2 {
+	color: #15b300;
+}
 
-li a:link, li a:visited
-{
+a.external {
+	display: inline-block;
+	color: #aaaaaa;
+	text-decoration: none;
+	border-radius: 10px;
+	padding: 5px;
+	width: fit-content;
+}
+
+p a {
+	color: inherit;
+}
+
+#sidebar-body {
+	height: fit-content;
+}
+
+#sidebar-body a:link, #sidebar-body a:visited {
 	display: block;
 	padding: 8px;
 	background-color: #757575;
 	color: #000000;
 	text-decoration: none;
-	width: 80%;
+	width: 148px;
 	text-align: center;
 	margin-right: 0px;
 }
 
-li a:hover
-{
-	display: block;
-	padding: 8px;
+#sidebar-body a:hover {
 	background-color: #5e5e5e;
-	color: #000000;
-	text-decoration: none;
-	width: 88%;
-	text-align: center;	
+	width: 168px;
 }
 
-li a.active
-{
-	display: block;
-	padding: 8px;
+#sidebar-body a.active {
 	background-color: #15b300;
-	color: #000000;
-	text-decoration: none;
-	width: 88%;
-	text-align: center;
+	width: 168px;
 }
 
-ul 
-{
-	list-style-type: none;
-	overflow: auto;
-	margin: 0;
-	padding: 0;
+@font-face {
+    font-family: 'roboto';
+    src: url('fonts/roboto-regular-webfont.woff2') format('woff2'),
+         url('fonts/roboto-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
